@@ -1,0 +1,380 @@
+:root{
+  --Dark-cyan: hsl(158, 36%, 37%); 
+  --Very-Dark-cyan: hsl(158, 44%, 22%); 
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+
+  --ff-Montserrat: 'Montserrat', sans-serif; 
+  --ff-Fraunces:  'Fraunces', sans-serif;
+}
+
+*, 
+*,::before, 
+*::after{
+  box-sizing: border-box;
+}
+
+html{
+  
+  font-size: 16px;
+}
+
+body{
+  background-color: var(--Cream);
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+/* =========Desktop first ==========*/
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 680px;
+  margin-block: 5rem;
+  margin-inline: auto;
+  background-color: var(--White);
+  border-radius: .5rem;
+}
+
+
+.perfume_image-desktop{
+  width: 320px;
+  height: 550px;
+  object-fit:cover;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+}
+
+.perfume_image-mobile{
+  display: none;
+}
+
+
+
+
+
+.about_section{
+  padding-inline: 2rem;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+.about_section .name{
+  color: var(--Dark-grayish-blue);
+  text-transform: uppercase;
+  font-family: var(--ff-Montserrat);
+  font-weight: 500;
+  letter-spacing: 2px;
+} 
+
+.about_section .perfume_title{
+  font-family: var(--ff-Fraunces);
+  font-size: 1.7rem;
+  margin-top: -1rem;
+}
+
+.desc{
+  font-size: .98rem;
+  font-family: var(--ff-Montserrat);
+  font-weight: 500;
+  letter-spacing: .7px;
+  line-height: 24px;
+  color: var(--Dark-grayish-blue);
+}
+
+.price{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-left: .7rem;
+}
+
+.current_price{
+  font-size: 2rem;
+  font-family: var(--ff-Fraunces);
+  color: var(--Dark-cyan);
+}
+
+.previous_price{
+  font-size: 1rem;
+  font-family: var(--ff-Montserrat);
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+
+.btn{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+  margin-inline: auto;
+  margin-bottom: -2rem;
+  width: 86%;
+  text-align: center;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: var(--ff-Montserrat);
+  border: none;
+  border-radius: .5rem;
+}
+
+.cart_img{
+  font-size: 1rem;
+} 
+
+
+
+/*========== Mobile desing========= */
+
+@media (max-width: 50em) { 
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  max-width: 400px;
+  margin-block: 5rem;
+  margin-inline: auto;
+  background-color: var(--White);
+  border-radius: .5rem;
+}
+
+
+.perfume_image-mobile{
+  display: inline;
+  width: 100%;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+.perfume_image-desktop{
+  display: none;
+}
+
+.about_section{
+  padding-inline: 1.4rem;
+  padding-bottom: 4rem;
+  width: 90%;
+}
+
+.about_section .name{
+  color: var(--Dark-grayish-blue);
+  text-transform: uppercase;
+  font-family: var(--ff-Montserrat);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.about_section .perfume_title{
+  font-family: var(--ff-Fraunces);
+  font-size: 1.5rem;
+}
+
+.desc{
+  font-size: .86rem;
+  font-family: var(--ff-Montserrat);
+  font-weight: 500;
+  letter-spacing: .7px;
+  line-height: 24px;
+  color: var(--Dark-grayish-blue);
+}
+
+.price{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-left: .5rem;
+}
+
+.current_price{
+  font-size: 2rem;
+  font-family: var(--ff-Fraunces);
+  color: var(--Dark-cyan);
+}
+
+.previous_price{
+  font-size: 1rem;
+  font-family: var(--ff-Montserrat);
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+
+.btn{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+  margin-inline: auto;
+  margin-bottom: -2rem;
+  width: 90%;
+  text-align: center;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: var(--ff-Montserrat);
+  border: none;
+  border-radius: .5rem;
+}
+
+.btn:hover {
+  opacity: 1;
+  background-color: var(--Very-Dark-cyan);
+  transition: ease-in-out 250ms;
+  cursor: pointer;
+}
+
+.cart_img{
+  margin-top: .3rem;
+}
+
+} 
+
+
+@media (max-width: 35em){
+  
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-block: 5rem;
+  margin-inline: auto;
+  background-color: var(--White);
+  border-radius: .5rem;
+}
+
+
+.perfume_image-mobile{
+  width: 100%;
+  max-width: 500;
+  max-height: 600;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+
+
+.about_section{
+  padding-inline: 1.4rem;
+  padding-bottom: 4rem;
+  width: 90%;
+}
+
+.about_section .name{
+  color: var(--Dark-grayish-blue);
+  text-transform: uppercase;
+  font-family: var(--ff-Montserrat);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.about_section .perfume_title{
+  font-family: var(--ff-Fraunces);
+  font-size: 1.4rem;
+}
+
+.desc{
+  font-size: .95rem;
+  font-family: var(--ff-Montserrat);
+  font-weight: 500;
+  letter-spacing: .7px;
+  line-height: 24px;
+  color: var(--Dark-grayish-blue);
+}
+
+.price{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.current_price{
+  font-size: 1.7rem;
+  font-family: var(--ff-Fraunces);
+  color: var(--Dark-cyan);
+}
+
+.previous_price{
+  font-size: .98rem;
+  font-family: var(--ff-Montserrat);
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+
+.btn{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+  margin-inline: auto;
+  margin-bottom: -2rem;
+  width: 88%;
+  text-align: center;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--ff-Montserrat);
+  border: none;
+  border-radius: .5rem;
+}
+}
+
+
+
+
+.footer a{
+  text-decoration: none;
+  color: var(--White);
+  padding: .3rem;
+}
+.footer{
+  background-color: var(--Dark-cyan);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 6rem auto;
+  padding: .7rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: var(--ff-Fraunces);
+}
+
+.social-links{
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--White);
+}
